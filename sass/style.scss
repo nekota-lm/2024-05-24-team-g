@@ -4,3 +4,10 @@
 @use "setting/common";
 @use "mixin/mixin";
 @use "base/base";
+
+$breakpoints: (
+  sm: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 950px)",
+  xl: "screen and (min-width: 1200px)",
+);
