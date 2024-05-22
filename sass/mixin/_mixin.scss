@@ -1,0 +1,17 @@
+$breakpoints: (
+  //キー　　値
+  sm: "screen and (min-width: 600px)",
+  md: "screen and (min-width: 768px)",
+  //768以上,
+  lg: "screen and (min-width: 900px)",
+  xl: "screen and (min-width: 1200px)"
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォルト値はsp
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}

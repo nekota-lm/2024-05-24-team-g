@@ -1,0 +1,26 @@
+//baseフォルダに_base.scssを作っていれる
+@use "../setting/font" as *;
+@use "../setting/color" as *;
+@use "../setting/common" as *;
+@use "../mixin/mixin" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-jp;
+  font-size: $font-size-14px;
+  color: $color-monochrome-blown;
+  line-height: $line-height-base;
+}
+.inner {
+  padding-inline: 20px;
+  max-width: calc(335px + 20px * 2);
+  margin-inline: auto;
+  @include mq(md) {
+    padding-inline: 90px;
+    max-width: calc(1100px + 90px * 2);
+    margin-inline: auto;
+  }
+}
